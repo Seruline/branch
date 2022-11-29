@@ -1,0 +1,93 @@
+body{
+    background-color: rgb(32, 29, 40);
+}
+.btn-success{
+    background-color:rgb(224, 217, 0);
+    color: #000;
+    font-weight: 600;
+}
+.btn-success:hover{
+    background-color:rgb(183, 177, 0);
+}
+.btn-check:active+.btn-success, .btn-check:checked+.btn-success, .btn-success.active, .btn-success:active, .show>.btn-success.dropdown-toggle
+{
+    background-color:rgb(255, 10, 186);
+}
+.active{
+    background-color: aqua;
+    user-select: none;
+}
+h1{
+    color:rgb(224, 217, 0);
+    margin-top: 25px;
+}
+.container{
+    display: block;
+    flex-direction: row;
+    
+}
+.knop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.card{
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    flex-direction: row;
+    background: none;
+
+}
+.slide{
+    padding: 0 20px;
+    display: flex;
+    height: 83vh;
+    border-radius: 20px;
+    margin: 10px;
+    flex: 1;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 500ms ease-in-out;
+}
+h3{
+    position: absolute;
+    top: 85%;
+    color: aliceblue;
+    font-weight: 300;
+    opacity: 0;
+}
+h4{
+    position: absolute;
+    top: 90%;
+    color: aliceblue;
+    font-weight: 300;
+    opacity: 0;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.slide.active{
+    flex: 10;
+}
+.slide.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+.slide.active h4{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+.change{
+    background-color: rgb(85, 63, 37);
+    transition: all 0.3s ease;
+}
+.change-remove{
+    background-color: rgb(32, 29, 40);
+    transition: all 0.3s ease;
+}

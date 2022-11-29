@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">    
+    <title>Document</title>
+</head>
+
+<body>
+
+<!--     <div class="container">
+        <input id="a" class="form-control m-3" type="text">
+        <input id="b" class="form-control m-3" type="text">
+        <button id="bt" class="btn btn-info" onclick="calc()">+</button>
+        <input id ="c" class="form-control m-3" type="text">
+    </div> -->
+    <div class="container">
+        <h1>JavaScript</h1>
+<!--         <span class="ms-2 mb-3">Здесь творится немыслемое</span>
+        <div class="input-group">
+            <input type="text" id="st" class="form-control w-50" aria-describedby="button-addon2">
+            <button class="btn btn-success" type="button" id="bt2">Button</button>
+        </div> -->
+        
+
+
+        <input id="st" class="form-control m-4 p-2 w-50" type="text">
+        <input id="x" class="form-control ms-4 w-50 ">
+        <div class="knop">
+            <button id="btn" class="btn btn-success me-4 mt-4" onclick="rev()">Реверс</button>
+        </div>
+    </div>
+
+     
+    <div class="card">
+        <div class="slide" 
+        style="
+        background-image: url('//images.unsplash.com/photo-1664055258681-794acf92460f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');">
+        <h3>Extreme</h3>
+        <h4>on the crest of a wave</h4>
+        </div>
+
+        <div class="slide active" 
+        style="
+        background-image: url('https://images.unsplash.com/photo-1518021964703-4b2030f03085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80');">
+        <h3>Mountains</h3>
+        <h4>description</h4>
+        </div>
+
+        <div class="slide" 
+        style="
+        background-image: url('//images.unsplash.com/photo-1664137752216-4df0f970ef05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=908&q=80');">
+        <h3>Space</h3>
+        <h4>the last frontier. This is the voyage of the Enterprise</h4>
+        </div>
+
+        <div class="slide" 
+        style="
+        background-image: url('//images.unsplash.com/photo-1664029276355-b011416d597a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');">
+        <h3>Sapphire</h3>
+        </div>
+
+        <div class="slide" 
+        style="
+        background-image: url('//images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80');">
+        <h3>We</h3>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script>
+        let model = {
+            a: 0,
+            b: 0,
+            c: 0,
+        }    
+
+        let aInput = document.getElementById("a");
+        let bInput = document.getElementById("b");
+        let cInput = document.getElementById("c");   
+ 
+        
+        function calc() {
+
+            let a = +aInput.value;
+            let b = +bInput.value;
+            cInput.value = a + b;
+
+        }
+        let str = document.getElementById("st");   
+        let xInput = document.getElementById("x");  
+
+        function rev(){
+            if (str.value.toLowerCase() === str.value.split("").reverse().join('').toLowerCase()) {
+                xInput.value = 'true';
+                document.querySelector('body').classList.remove('change-remove');
+                document.querySelector('body').classList.add('change');
+            }else{
+                xInput.value = 'false';
+                document.querySelector('body').classList.add('change-remove');
+            }
+        }
+            
+/*         let bt = document.getElementById("btn");
+        bt.addEventListener("click", function() {
+            alert('Работает');
+            this.classList.add("active");
+        });
+ */
+
+
+/*         function revString (stringArg) {
+            a = stringArg.split(""); // Array
+            b = a.reverse(); // Reversed array
+            c = b.join(""); // String
+        return c;
+        } */
+        
+
+    </script>
+</body>
+
+</html>
